@@ -12,6 +12,16 @@ a {
 	text-decoration: none;
 }
 
+h1 {
+	margin: 0;
+	font-size: 86px;
+}
+
+p {
+	font-size: 22px;
+	max-width: 480px;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -20,20 +30,24 @@ a {
 	--purple: hsl(273, 85%, 56%);
 	--purpledark: hsl(273, 39%, 30%);
 	--turquoise: hsl(173, 29%, 60%);
+	--turquoisedark: hsl(173, 29%, 34%);
+	--yellow: hsl(39, 69%, 51%);
+	--blue: hsl(234, 59%, 65%);
+	--orange: hsl(14, 51%, 56%);
+	--gray: hsl(0, 0%, 13%);
 }
-
 
 body::-webkit-scrollbar {
 	width: 12px;               /* width of the entire scrollbar */
 	scrollbar-width: thin;          /* "auto" or "thin" */
-  }
-  
-  body::-webkit-scrollbar-track {
+}
+
+body::-webkit-scrollbar-track {
 	background: var(--purple);        /* color of the tracking area */
-  }
-  
-  body::-webkit-scrollbar-thumb {
+}
+
+body::-webkit-scrollbar-thumb {
 	background-color: rgba(255, 255, 255, 0.5);    /* color of the scroll thumb */
 	border-radius: 60px;       /* roundness of the scroll thumb */
 	border: 3px solid var(--purple);  /* creates padding around scroll thumb */
-  }
+}

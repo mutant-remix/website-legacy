@@ -5,11 +5,17 @@
     font-size: 24px;
     cursor: pointer;
 
-    box-shadow: 0px 8px var(--purpledark);
-
     &[data-style="purple"] {
         background: var(--purple);
+        --shadow: var(--purpledark);
     }
+
+    &[data-style="turquoise"] {
+        background: var(--turquoise);
+        --shadow: var(--turquoisedark);
+    }
+
+    box-shadow: 0px 8px var(--shadow);
 
     > img {
         margin-left: 8px;
@@ -17,6 +23,6 @@
 
     &:active {
         transform: translateY(4px);
-        box-shadow: 0px 4px var(--purpledark);
+        box-shadow: 0px 4px var(--shadow);
     }
 }

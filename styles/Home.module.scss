@@ -7,27 +7,25 @@
 
     display: flex;
 
-    > * {
-        flex: 1;
+    .whitespace {
+        flex: 5;
     }
 
     .image {
+        flex: 8;
         display: grid;
         place-items: center;
 
         img {
             width: 100%;
-            height: 850px;
             padding: 8em;
+            height: 100%;
             object-fit: scale-down;
         }
     }
 }
 
 .main {
-    color: white;
-    user-select: none;
-
     &.top {
         flex: 7;
         display: flex;
@@ -60,16 +58,6 @@
                 position: absolute;
                 margin-top: -1.4em;
             }
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 86px;
-        }
-
-        p {
-            font-size: 22px;
-            max-width: 480px;
         }
     }
 }

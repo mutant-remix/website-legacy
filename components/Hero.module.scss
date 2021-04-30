@@ -1,5 +1,26 @@
 .hero {
+    color: white;
     display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+    min-height: 50vh;
+    user-select: none;
+
+    > * {
+        flex: 1;
+    }
+
+    &[data-full="true"] {
+        min-height: 100vh;
+    }
+
+    &[data-column="true"] {
+        flex-direction: column;
+    }
+
+    &:not([data-column="true"]) {
+        align-items: center;
+    }
+
+    &[data-pad="true"] {
+        padding: 0 4rem;
+    }
 }
