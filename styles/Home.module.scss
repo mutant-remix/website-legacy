@@ -42,7 +42,25 @@
     }
 
     .text {
-        padding: 0 20rem;
+        display: flex;
+
+        > * {
+            flex: 1;
+        }
+
+        > :first-child {
+            display: flex;
+            justify-content: center;
+        }
+
+        .breakout {
+            position: relative;
+
+            h1 {
+                position: absolute;
+                margin-top: -1.4em;
+            }
+        }
 
         h1 {
             margin: 0;

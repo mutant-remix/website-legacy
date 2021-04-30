@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import { Hero } from '../components/Hero'
 import styles from '../styles/Home.module.scss'
 import { Button } from '../components/Button'
+import { Emoji } from '../components/Emoji'
 
 export default function Home() {
 	return (
@@ -20,23 +21,24 @@ export default function Home() {
 						<div className={styles.logo}>
 							<img src="/logo.svg" />
 						</div>
-						<div className={styles.backRef}>back to revolt.chat</div>
-					</div>
-					<div className={styles.text}>
-						<div>
-							<h1>Be diverse.</h1>
-						</div>
+						<div className={styles.backRef}><Emoji codepoint="2b05-fe0f" /> back to revolt.chat</div>
 					</div>
 				</div>
 				<div className={classNames(styles.main, styles.bottom)}>
 					<div className={styles.text}>
 						<div>
-							<h1>Stand out.</h1>
-							<p>
-								Mutant Remix brings a new twist to the good old emojis that have become a part of our daily conversations.
-							</p>
-							<Button style='purple'>Learn on how to use it</Button>
+							<div>
+								<div className={styles.breakout}>
+									<h1>Be diverse.</h1>
+								</div>
+								<h1>Stand out.</h1>
+								<p>
+									Mutant Remix brings a new twist to the good old emojis that have become a part of our daily conversations.
+								</p>
+								<Button style='purple'>Learn how to use it <Emoji codepoint="2197-fe0f" /></Button>
+							</div>
 						</div>
+						<div />
 					</div>
 				</div>
 			</Hero>
