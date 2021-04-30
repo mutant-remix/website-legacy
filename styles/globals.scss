@@ -21,3 +21,19 @@ a {
 	--purpledark: hsl(273, 39%, 30%);
 	--turquoise: hsl(173, 29%, 60%);
 }
+
+
+body::-webkit-scrollbar {
+	width: 12px;               /* width of the entire scrollbar */
+	scrollbar-width: thin;          /* "auto" or "thin" */
+  }
+  
+  body::-webkit-scrollbar-track {
+	background: var(--purple);        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.5);    /* color of the scroll thumb */
+	border-radius: 60px;       /* roundness of the scroll thumb */
+	border: 3px solid var(--purple);  /* creates padding around scroll thumb */
+  }
