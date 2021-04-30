@@ -19,7 +19,7 @@ export default function Home() {
 				<div className={classNames(styles.main, styles.top)}>
 					<div className={styles.navbar}>
 						<div className={styles.logo}>
-							<img src="/logo.svg" />
+							<img src="/logo.svg" draggable="false"/>
 						</div>
 						<div className={styles.backRef}><Emoji codepoint="2b05-fe0f" /> back to revolt.chat</div>
 					</div>
