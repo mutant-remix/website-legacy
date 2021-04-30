@@ -1,0 +1,16 @@
+.button {
+    padding: 14px 20px;
+    width: fit-content;
+    border-radius: 10px;
+
+    box-shadow: 0px 8px var(--purpledark);
+
+    &[data-style="purple"] {
+        background: var(--purple);
+    }
+
+    &:active {
+        transform: translateY(4px);
+        box-shadow: 0px 4px var(--purpledark);
+    }
+}

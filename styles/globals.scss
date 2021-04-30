@@ -1,21 +1,23 @@
+@import "~@fontsource/barlow/600.css";
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: "Barlow";
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 :root {
-  --purple: hsl(273, 85%, 56%);
-  --turquoise: hsl(173, 29%, 60%);
+	--purple: hsl(273, 85%, 56%);
+	--purpledark: hsl(273, 39%, 30%);
+	--turquoise: hsl(173, 29%, 60%);
 }
