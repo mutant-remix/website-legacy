@@ -1,4 +1,4 @@
-<img src="assets/mr_release_v1.png" style="margin: 20px 0 0 0"></img>
+<img src="../public/assets/remix_release_v1.png" style="margin: 20px 0 0 0"></img>
 
 ### 30th April 2021
 
