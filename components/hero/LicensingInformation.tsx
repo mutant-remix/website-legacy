@@ -26,9 +26,9 @@ export function LicensingInformation() {
 							<h3><Emoji codepoint="2705" /> Share the emoji pack with your friends!</h3>
 						</div>
 						<div>
-							<h3><Emoji codepoint="2705" /> Make your own! (make sure to add attribution!)</h3>
+							<h3><Emoji codepoint="2705" /> Make your own!</h3>
 							<p>
-								You’re free to remix, transform or build upon the Mutant Standard emoji pack, as long as you follow the original Creative Commons license.
+								You’re free to remix, transform or build upon the Mutant Standard emoji pack, as long as you follow the original Creative Commons license. Don't forget to add attribution!
 							</p>
 						</div>
 					</div>
