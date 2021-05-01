@@ -17,7 +17,7 @@ export default function Home() {
                 <meta property="og:image" content="https://mutant.revolt.chat/assets/embed.png" />
                 <meta property="og:description" content="Mutant Remix brings a new twist to the good old emojis that have become a part of our daily conversations." />
 
-                <meta property="twitter:title" content="Revolt" />
+                <meta property="twitter:title" content="Mutant Remix" />
                 <meta property="twitter:site" content="@revoltchat" />
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:image" content="https://mutant.revolt.chat/assets/embed.png" />
@@ -36,11 +36,11 @@ export default function Home() {
 			</div>
 			<Hero column full>
 				<div className={classNames(styles.main, styles.top)}>
-					<div className={styles.navbar}>
-						<div className={styles.logo}>
-							<img src="/logo.svg" draggable="false"/>
+					<div className={styles.menu}>
+						<div className={styles.navbar}>
+							<img className={styles.logo} src="/logo.svg" draggable="false"/>
+							<a className={styles.backRef} href="https://revolt.chat"><Emoji codepoint="2b05-fe0f" /> back to revolt.chat</a>
 						</div>
-						<div className={styles.backRef}><Emoji codepoint="2b05-fe0f" /> back to revolt.chat</div>
 					</div>
 				</div>
 				<div className={classNames(styles.main, styles.bottom)}>

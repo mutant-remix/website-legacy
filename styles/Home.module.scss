@@ -62,19 +62,25 @@
     }
 }
 
-.navbar {
-    height: 180px;
+.menu {
     display: flex;
-    padding: 4rem;
-    align-items: center;
-    justify-content: space-between;
-
-    .logo {
-        img {
+    justify-content: center;
+    .navbar {
+        height: 180px;
+        display: flex;
+        padding: 0 4rem;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1950px;
+        flex-grow: 1;
+    
+        .logo {
             height: 50px;
         }
     }
 }
+
+
 
 .backRef {
     font-size: 22px;
