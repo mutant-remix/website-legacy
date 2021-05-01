@@ -1,3 +1,5 @@
+![Mutant Remix embed with the slogan "Be diverse. Stand out."](public/assets/embed.png)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
