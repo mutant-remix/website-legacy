@@ -1,9 +1,16 @@
 import styles from './Emoji.module.scss';
 
-export interface Props {
+export type Props = {
     codepoint: string
-}
+} | {
+    path: string
+};
 
-export function Emoji({ codepoint }: Props) {
-    return <img className={styles.emoji} src={`https://mutant.revolt.chat/emoji/${codepoint}.svg`} />
+export function Emoji(props: Props) {
+    let o = props as any;
+    return <img className={styles.emoji}
+        src={`https://mutant.revolt.chat/static/${
+            o.codepoint ? `codepoint/${o.codepoint}`
+                : `shortcode/${o.path}`
+        }.svg`} />
 }
