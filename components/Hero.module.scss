@@ -3,11 +3,17 @@
 
     [data-invert="true"] {
         color: black;
+        margin-bottom: 50px;
     }
 
     display: flex;
-    min-height: 50vh;
+    min-height: 480px;
     user-select: none;
+
+    h1 {
+        font-size: 70px;
+        line-height: 70px;
+    }
 
     > * {
         flex: 1;
@@ -33,6 +39,6 @@
 .clamp {
     .hero {
         margin: auto;
-        max-width: 1920px;
+        max-width: 1500px;
     }
 }

@@ -1,7 +1,7 @@
 .footer {
     display: flex;
     padding: 4rem 2rem;
-    font-size: 24px;
+    font-size: 20px;
     user-select: none;
     align-items: center;
     flex-direction: column;
@@ -10,11 +10,17 @@
     background: var(--gray);
 
     .revolt {
-        height: 1rem;
+        height: 15px;
+    }
+
+    .link {
+        color: var(--purple);
     }
 
     p {
-        opacity: 0.4;
+        color: darkgrey;
+        font-size: 16px;
         text-align: center;
+        width: unset;
     }
 }

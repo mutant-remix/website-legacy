@@ -6,7 +6,7 @@ export function Footer() {
         <div className={styles.footer}>
             <span>Made with <Emoji codepoint="2764-fe0f" /> by nizune for <a href="https://revolt.chat" target="_blank"><img className={styles.revolt} src="https://revolt.chat/logo.svg" /></a></span>
             <p>
-                Mutant Remix is not affiliated with https://mutant.tech.
+                Mutant Remix is not affiliated with <a className={styles.link} href="https://mutant.tech">mutant.tech</a>.<br />
                 This is a transformation of the original Mutant Standard emoji pack, which is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
             </p>
         </div>
