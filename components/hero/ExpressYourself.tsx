@@ -11,17 +11,19 @@ const EMOJIS = [
     "people_animals/creatures/fantasy_metahumans/troll",
     "people_animals/creatures/other_mammals/red_panda",
     "expressions/hands/paw/v_paw_fk1",
-    "objects/party/tada",
     "expressions/smileys/happy_fun/party_face",
     "people_animals/creatures/other_mammals/otter",
-    "extra/weapons/flail",
+    "extra/weapons/war_hammer",
+    "gsr/gsd/symbols/bisexual_triangles",
+    "gsr/gsd/symbols/furry_pride",
+    "nature_effects/earth/earth_emea",
+    "extra/cyber/crt_test_pattern",
+    "extra/occult_magic/magic/magic_wand"
 ];
-
-EMOJIS.sort(() => Math.random() - 0.5);
 
 export function ExpressYourself() {
     const ref = useRef<HTMLDivElement>();
-    let [order, setOrder] = useState(EMOJIS);
+    let [order, setOrder] = useState(EMOJIS.sort(() => .5 - Math.random()));
 
     useEffect(() => {
         if (typeof ref.current === 'undefined') return;
