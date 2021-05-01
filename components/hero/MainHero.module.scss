@@ -26,6 +26,11 @@
 }
 
 .main {
+    h1 {
+        font-size: 86px;
+        line-height: unset;
+    }
+
     &.top {
         flex: 7;
         display: flex;
