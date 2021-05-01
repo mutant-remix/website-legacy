@@ -1,5 +1,10 @@
 .hero {
     color: white;
+
+    [data-invert="true"] {
+        color: black;
+    }
+
     display: flex;
     min-height: 50vh;
     user-select: none;
