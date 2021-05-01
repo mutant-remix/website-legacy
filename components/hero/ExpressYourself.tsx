@@ -21,6 +21,8 @@ const EMOJIS = [
     "extra/occult_magic/magic/magic_wand"
 ];
 
+const IMAGE_WIDTH = 120 + 20;
+
 export function ExpressYourself() {
     const ref = useRef<HTMLDivElement>();
     let [order, setOrder] = useState(EMOJIS.sort(() => .5 - Math.random()));
@@ -42,9 +44,9 @@ export function ExpressYourself() {
             lastTime = currentTime;
 
             x += (elapsed) * 0.1;
-            let display = Math.floor(el.clientWidth / 120);
+            let display = Math.floor(el.clientWidth / IMAGE_WIDTH);
 
-            if (x >= 120) {
+            if (x >= IMAGE_WIDTH) {
                 x = 0;
                 let newOrder = [...order.slice(1), order[0]];
                 setOrder(newOrder);
@@ -58,9 +60,9 @@ export function ExpressYourself() {
                 
                 let opacity = 0;
                 if (i === display - 1) {
-                    opacity = x / 120;
+                    opacity = x / IMAGE_WIDTH;
                 } else if (i === 1) {
-                    opacity = 1 - x / 120;
+                    opacity = 1 - x / IMAGE_WIDTH;
                 } else if (i < display && i > 0) {
                     opacity = 1;
                 }
