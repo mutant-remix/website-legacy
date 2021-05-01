@@ -10,10 +10,10 @@ export function LicensingInformation() {
 				<div>
 					<h1>Want it?<br/>Use it!</h1>
 					<p>
-						Mutant Standard and Mutant Remix are both licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+						Mutant Standard and Mutant Remix are both licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 					</p>
 				</div>
-				<div />
+				<img src="/cc.svg" className={styles.cc} />
 			</Hero>
 			<Hero background="orange" column pad clamp>
 				<div className={styles.title}>
