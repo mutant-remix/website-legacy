@@ -39,7 +39,7 @@ export default function Home() {
 					<div className={styles.menu}>
 						<div className={styles.navbar}>
 							<img className={styles.logo} src="/logo.svg" draggable="false"/>
-							<a className={styles.backRef} href="https://revolt.chat"><Emoji codepoint="2b05-fe0f" /> back to revolt.chat</a>
+							<a className={styles.backRef} href="https://revolt.chat" target="_blank"><Emoji codepoint="2b05-fe0f" /> <span>back to revolt.chat</span></a>
 						</div>
 					</div>
 				</div>
@@ -86,6 +86,13 @@ export default function Home() {
 					<p>
 						Mutant Standard and Mutant Remix are both licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 					</p>
+				</div>
+				<div />
+			</Hero>
+			<Hero background="orange" column pad>
+				<div>
+					<h2>So, what am I allowed to do with it?</h2>
+					<h2 data-invert="true">Mutant Standard and Mutant Remix</h2>
 				</div>
 				<div />
 			</Hero>

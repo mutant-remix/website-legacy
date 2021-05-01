@@ -10,21 +10,34 @@ body {
 a {
 	color: inherit;
 	text-decoration: none;
-	//transition: transform ease-in-out 3s; NOT WORKING
+	transition: 0.2s ease all;
+
 	&:hover {
-		text-decoration: underline;
+		span {
+			text-decoration: underline;
+		}
+
 		transform: translateY(-3px);
 	}
+
 	&:active {
-		text-decoration: none;
+		span {
+			text-decoration: none;
+		}
+		
 		transform: translateZ(5px);
-		opacity: .8;
+		opacity: .6;
 	}
 }
 
 h1 {
 	margin: 0;
 	font-size: 86px;
+}
+
+h2 {
+	margin: 0;
+	font-size: 48px;
 }
 
 p {
