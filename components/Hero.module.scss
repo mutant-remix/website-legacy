@@ -7,12 +7,18 @@
     }
 
     display: flex;
-    min-height: 480px;
+    min-height: 500px;
     user-select: none;
 
     h1 {
-        font-size: 70px;
+        font-size: 64px;
         line-height: 70px;
+    }
+
+    p {
+        font-size: 20px;
+        margin-bottom: 40px;
+        max-width: 418px;
     }
 
     > * {
