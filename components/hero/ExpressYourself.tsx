@@ -4,7 +4,7 @@ import { Hero } from "../Hero";
 
 export function ExpressYourself() {
     return (
-        <Hero background="yellow" pad>
+        <Hero background="yellow" pad clamp>
             <div>
                 <h1>Express yourself in new ways.</h1>
                 <p>

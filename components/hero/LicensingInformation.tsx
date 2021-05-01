@@ -6,7 +6,7 @@ import styles from './LicensingInformation.module.scss';
 export function LicensingInformation() {
     return (
         <Fragment>
-            <Hero background="orange" pad>
+            <Hero background="orange" pad clamp>
 				<div>
 					<h1>Want it?<br/>Use it!</h1>
 					<p>
@@ -15,7 +15,7 @@ export function LicensingInformation() {
 				</div>
 				<div />
 			</Hero>
-			<Hero background="orange" column pad>
+			<Hero background="orange" column pad clamp>
 				<div className={styles.title}>
 					<h2>So, what am I allowed to do with it?</h2>
 					<h2 data-invert="true">Mutant Standard and Remix</h2>

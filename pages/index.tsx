@@ -9,6 +9,7 @@ import { MainHero } from '../components/hero/MainHero'
 import { ExpressYourself } from '../components/hero/ExpressYourself'
 import { PlainAndSimple } from '../components/hero/PlainAndSimple'
 import { LicensingInformation } from '../components/hero/LicensingInformation'
+import { Footer } from '../components/Footer'
 
 export default function Home() {
 	return (
@@ -32,11 +33,13 @@ export default function Home() {
                 <meta property="og:image:width" content="1280" />
                 <meta property="og:image:height" content="720" />
 			</Head>
-			
+
 			<MainHero />
 			<ExpressYourself />
 			<PlainAndSimple />
 			<LicensingInformation />
+
+			<Footer />
 		</main>
 	)
 }

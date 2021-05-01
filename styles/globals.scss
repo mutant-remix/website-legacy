@@ -47,6 +47,7 @@ h3 {
 
 p {
 	font-size: 22px;
+	width: clamp(45ch, 50%, 75ch);
 }
 
 * {

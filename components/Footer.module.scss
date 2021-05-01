@@ -1,0 +1,20 @@
+.footer {
+    display: flex;
+    padding: 4rem 2rem;
+    font-size: 24px;
+    user-select: none;
+    align-items: center;
+    flex-direction: column;
+
+    color: white;
+    background: var(--gray);
+
+    .revolt {
+        height: 1rem;
+    }
+
+    p {
+        opacity: 0.4;
+        text-align: center;
+    }
+}

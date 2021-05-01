@@ -7,12 +7,26 @@ interface Props {
     column?: boolean
     full?: boolean
     pad?: boolean
+
+    clamp?: boolean
 }
 
-export function Hero({ children, column, full, pad, background }: Props) {
+export function Hero(props: Props) {
+    if (props.clamp) {
+        let { clamp: _, background, ...newProps } = props;
+
+        return (
+            <div className={styles.clamp}
+                style={{ backgroundColor: background ? `var(--${background})` : undefined }}>
+                <Hero {...newProps} />
+            </div>
+        )
+    }
+    
+    const { children, column, full, pad, background } = props;
     return (
         <div
-            style={{ backgroundColor: `var(--${background})` }}
+            style={{ backgroundColor: background ? `var(--${background})` : undefined }}
             className={styles.hero}
             data-column={column}
             data-full={full}
