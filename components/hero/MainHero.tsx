@@ -1,6 +1,7 @@
 import { Hero } from "../Hero";
 import { Fragment } from "react";
 import { Emoji } from "../Emoji";
+import { Navbar } from "../Navbar";
 import { Button } from "../Button";
 import classNames from "classnames";
 import styles from './MainHero.module.scss';
@@ -17,10 +18,7 @@ export function MainHero() {
 			<Hero column full>
 				<div className={classNames(styles.main, styles.top)}>
 					<div className={styles.menu}>
-						<div className={styles.navbar}>
-							<img className={styles.logo} src="/logo.svg" draggable="false"/>
-							<a className={styles.backRef} href="https://revolt.chat" target="_blank"><Emoji codepoint="2b05-fe0f" /> <span>back to revolt.chat</span></a>
-						</div>
+						<Navbar />
 					</div>
 				</div>
 				<div className={classNames(styles.main, styles.bottom)}>

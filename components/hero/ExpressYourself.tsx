@@ -1,6 +1,7 @@
 import styles from './ExpressYourself.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import { Button } from "../Button";
+import useMedia from "use-media";
 import { Emoji } from "../Emoji";
 import { Hero } from "../Hero";
 
@@ -25,6 +26,7 @@ const IMAGE_WIDTH = 120 + 20;
 
 export function ExpressYourself() {
     const ref = useRef<HTMLDivElement>();
+    const isSmall = useMedia({ maxWidth: '1050px' });
     let [order, setOrder] = useState(EMOJIS.sort(() => .5 - Math.random()));
 
     useEffect(() => {
@@ -59,12 +61,29 @@ export function ExpressYourself() {
                 let element = el.children[i] as HTMLImageElement;
                 
                 let opacity = 0;
-                if (i === display - 1) {
-                    opacity = x / IMAGE_WIDTH;
-                } else if (i === 1) {
-                    opacity = 1 - x / IMAGE_WIDTH;
-                } else if (i < display && i > 0) {
-                    opacity = 1;
+                if (isSmall) {
+                    /* if (i === display) {
+                        opacity = x / IMAGE_WIDTH;
+                    } else if (i === 0) {
+                        opacity = 1 - x / IMAGE_WIDTH;
+                    } else if (i < display && i > 0) {
+                        opacity = 1;
+                    } */
+                    if (i === display + 1) {
+                        opacity = x / IMAGE_WIDTH;
+                    } else if (i === 0) {
+                        opacity = 1 - x / IMAGE_WIDTH;
+                    } else {
+                        opacity = 1;
+                    }
+                } else {
+                    if (i === display - 1) {
+                        opacity = x / IMAGE_WIDTH;
+                    } else if (i === 1) {
+                        opacity = 1 - x / IMAGE_WIDTH;
+                    } else if (i < display && i > 0) {
+                        opacity = 1;
+                    }
                 }
 
                 element.style.opacity = opacity.toString();

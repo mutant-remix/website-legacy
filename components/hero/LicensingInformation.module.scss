@@ -3,15 +3,15 @@
 }
 
 .licensing {
-    display: flex;
     gap: 40px;
+    display: flex;
     justify-content: center;
 
     h3 {
         display: flex;
-        align-items: center;
 
         > img {
+            margin-top: 6px;
             margin-right: 8px;
         }
     }
@@ -28,5 +28,26 @@
                 margin-left: 48px;
             }
         }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .licensing {
+        gap: unset;
+        flex-direction: column;
+
+        > div {
+            gap: 20px;
+            
+            > div p {
+                margin-left: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .cc {
+        width: 200px;
     }
 }

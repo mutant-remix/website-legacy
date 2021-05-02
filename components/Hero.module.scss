@@ -6,14 +6,10 @@
         margin-bottom: 50px;
     }
 
+    width: 100%;
     display: flex;
     min-height: 500px;
     user-select: none;
-
-    h1 {
-        font-size: 64px;
-        line-height: 70px;
-    }
 
     p {
         font-size: 20px;
@@ -28,6 +24,7 @@
     > img {
         min-width: 0;
         height: 120px;
+        max-width: 100%;
     }
 
     &[data-full="true"] {
@@ -55,5 +52,18 @@
     .hero {
         margin: auto;
         max-width: 1500px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .hero {
+        &:not([data-column="true"]) {
+            gap: 24px;
+            flex-direction: column-reverse;
+        }
+
+        &[data-pad="true"] {
+            padding: 56px 24px;
+        }
     }
 }

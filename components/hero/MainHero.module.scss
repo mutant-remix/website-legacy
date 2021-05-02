@@ -21,13 +21,13 @@
             padding: 8em;
             height: 100%;
             object-fit: scale-down;
+            max-height: 100vh;
         }
     }
 }
 
 .main {
     h1 {
-        font-size: 86px;
         line-height: unset;
     }
 
@@ -70,20 +70,6 @@
 .menu {
     display: flex;
     justify-content: center;
-    
-    .navbar {
-        height: 180px;
-        display: flex;
-        padding: 0 4rem;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 1950px;
-        flex-grow: 1;
-    
-        .logo {
-            height: 50px;
-        }
-    }
 }
 
 .backRef {
@@ -91,5 +77,16 @@
 
     > img {
         margin-right: 8px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .overlay {
+        display: none;
+    }
+
+    .main .text {
+        padding: 0 12px;
+        display: block;
     }
 }

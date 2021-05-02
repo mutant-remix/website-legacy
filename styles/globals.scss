@@ -51,7 +51,18 @@ h3 {
 
 p {
 	font-size: 22px;
-	width: clamp(45ch, 50%, 75ch);
+	width: clamp(0, 50%, 75ch);
+}
+
+@media screen and (max-width: 460px) {
+    h1 { font-size: 64px; }
+	h2 { font-size: 32px; }
+	h3 { font-size: 24px; }
+}
+
+@media screen and (max-width: 340px) {
+    h1 { font-size: 42px; }
+	h2 { font-size: 32px; }
 }
 
 * {
