@@ -4,6 +4,7 @@ import { Button } from "../Button";
 import useMedia from "use-media";
 import { Emoji } from "../Emoji";
 import { Hero } from "../Hero";
+import { useWindowSize } from '../../util/WindowSize';
 
 const EMOJIS = [
     "gsr/gsd/misc/so_gay",
@@ -25,9 +26,15 @@ const EMOJIS = [
 const IMAGE_WIDTH = 120 + 20;
 
 export function ExpressYourself() {
+    const { width } = useWindowSize();
     const ref = useRef<HTMLDivElement>();
-    const isSmall = useMedia({ maxWidth: '1050px' });
-    let [order, setOrder] = useState(EMOJIS.sort(() => .5 - Math.random()));
+    let [order, setOrder] = useState(EMOJIS);
+
+    const isSmall = width <= 1050;
+
+    useEffect(() => {
+        setOrder(order.sort(() => .5 - Math.random()));
+    }, []);
 
     useEffect(() => {
         if (typeof ref.current === 'undefined') return;
@@ -62,18 +69,15 @@ export function ExpressYourself() {
                 
                 let opacity = 0;
                 if (isSmall) {
-                    /* if (i === display) {
-                        opacity = x / IMAGE_WIDTH;
-                    } else if (i === 0) {
-                        opacity = 1 - x / IMAGE_WIDTH;
-                    } else if (i < display && i > 0) {
-                        opacity = 1;
-                    } */
                     if (i === display + 1) {
-                        opacity = x / IMAGE_WIDTH;
+                        opacity = 0.7 * x / IMAGE_WIDTH;
+                    } else if (i === display) {
+                        opacity = 0.7 + 0.3 * x / IMAGE_WIDTH;
                     } else if (i === 0) {
-                        opacity = 1 - x / IMAGE_WIDTH;
-                    } else {
+                        opacity = 0.7 - x / IMAGE_WIDTH;
+                    } else if (i === 1) {
+                        opacity = 1 - 0.3 * x / IMAGE_WIDTH;
+                    } else if (i < display) {
                         opacity = 1;
                     }
                 } else {

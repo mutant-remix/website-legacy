@@ -32,6 +32,8 @@ export default function Home() {
                 <meta property="og:image:type" content="image/png" />
                 <meta property="og:image:width" content="1280" />
                 <meta property="og:image:height" content="720" />
+
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			</Head>
 
 			<MainHero />
