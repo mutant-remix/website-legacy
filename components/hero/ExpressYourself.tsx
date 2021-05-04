@@ -24,6 +24,7 @@ const EMOJIS = [
 ];
 
 const IMAGE_WIDTH = 120 + 20;
+const easeInOutQuad = t => t<.5 ? 2*t*t : -1+(4-2*t)*t;
 
 export function ExpressYourself() {
     const { width } = useWindowSize();
@@ -40,7 +41,7 @@ export function ExpressYourself() {
         if (typeof ref.current === 'undefined') return;
         let el = ref.current;
 
-        let x = 0;
+        let v = 0;
         let lastTime = performance.now();
         let animate = true;
 
@@ -52,17 +53,18 @@ export function ExpressYourself() {
             let elapsed = currentTime - lastTime;
             lastTime = currentTime;
 
-            x += (elapsed) * 0.1;
+            v += (elapsed) * 0.1;
             let display = Math.floor(el.clientWidth / IMAGE_WIDTH);
 
-            if (x >= IMAGE_WIDTH) {
-                x = 0;
+            if (v >= IMAGE_WIDTH) {
+                v = 0;
                 let newOrder = [...order.slice(1), order[0]];
                 setOrder(newOrder);
                 order = newOrder;
             }
 
-            el.style.transform = `translateX(-${x}px)`;
+            let x = easeInOutQuad(v / IMAGE_WIDTH);
+            el.style.transform = `translateX(-${x * IMAGE_WIDTH}px)`;
 
             for (let i=0;i<el.children.length;i++) {
                 let element = el.children[i] as HTMLImageElement;
@@ -70,21 +72,21 @@ export function ExpressYourself() {
                 let opacity = 0;
                 if (isSmall) {
                     if (i === display + 1) {
-                        opacity = 0.7 * x / IMAGE_WIDTH;
+                        opacity = 0.7 * x;
                     } else if (i === display) {
-                        opacity = 0.7 + 0.3 * x / IMAGE_WIDTH;
+                        opacity = 0.7 + 0.3 * x;
                     } else if (i === 0) {
-                        opacity = 0.7 - x / IMAGE_WIDTH;
+                        opacity = 0.7 - x;
                     } else if (i === 1) {
-                        opacity = 1 - 0.3 * x / IMAGE_WIDTH;
+                        opacity = 1 - 0.3 * x;
                     } else if (i < display) {
                         opacity = 1;
                     }
                 } else {
                     if (i === display - 1) {
-                        opacity = x / IMAGE_WIDTH;
+                        opacity = x;
                     } else if (i === 1) {
-                        opacity = 1 - x / IMAGE_WIDTH;
+                        opacity = 1 - x;
                     } else if (i < display && i > 0) {
                         opacity = 1;
                     }
