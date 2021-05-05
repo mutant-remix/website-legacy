@@ -1,21 +1,15 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import classNames from 'classnames'
-import { Hero } from '../components/Hero'
-import styles from '../styles/Home.module.scss'
-import { Button } from '../components/Button'
-import { Emoji } from '../components/Emoji'
+import { Page } from '../components/Page'
 import { MainHero } from '../components/hero/MainHero'
-import { ExpressYourself } from '../components/hero/ExpressYourself'
 import { PlainAndSimple } from '../components/hero/PlainAndSimple'
+import { ExpressYourself } from '../components/hero/ExpressYourself'
 import { LicensingInformation } from '../components/hero/LicensingInformation'
-import { Footer } from '../components/Footer'
 
 export default function Home() {
 	return (
-		<main>
+        <Page>
 			<Head>
-				<title>Mutant Remix</title>
+                <title>Mutant Remix</title>
 
                 <meta property="og:title" content="Mutant Remix" />
                 <meta property="og:url" content="https://mutant.revolt.chat" />
@@ -32,16 +26,12 @@ export default function Home() {
                 <meta property="og:image:type" content="image/png" />
                 <meta property="og:image:width" content="1280" />
                 <meta property="og:image:height" content="720" />
-
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			</Head>
 
 			<MainHero />
 			<ExpressYourself />
 			<PlainAndSimple />
 			<LicensingInformation />
-
-			<Footer />
-		</main>
+        </Page>
 	)
 }

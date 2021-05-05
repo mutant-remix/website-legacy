@@ -1,0 +1,11 @@
+.clamp {
+    margin: auto;
+    padding: 0 4rem;
+    max-width: 1950px;
+}
+
+@media screen and (max-width: 650px) {
+    .navbar {
+        padding: 2rem 1rem;
+    }
+}

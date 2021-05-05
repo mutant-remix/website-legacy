@@ -1,0 +1,72 @@
+.version {
+    color: gray;
+}
+
+.downloads {
+    margin: 4em 0;
+    display: flex;
+    
+    .column {
+        flex: 1;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 1em;
+    }
+
+    a {
+        display: block;
+        width: fit-content;
+    }
+}
+
+.button {
+    display: flex;
+    width: fit-content;
+    border-radius: 4px;
+    flex-direction: row;
+    background: var(--lightgray);
+    transition: .2s ease background-color;
+
+    &:hover {
+        background: var(--lightbutnotdarkgray);
+    }
+
+    span, a {
+        padding: 1rem;
+        text-decoration: none !important;
+    }
+
+    &[data-type="svg"] {
+        background: var(--orange);
+
+        &:hover {
+            background: var(--orangedark);
+        }
+    }
+
+    &[data-type="masto"] {
+        background: var(--purple);
+
+        &:hover {
+            background: var(--purpledark);
+        }
+    }
+
+    &[data-type="png"] {
+        background: var(--turquoise);
+
+        a:hover {
+            background: var(--turquoisedark);
+        }
+    }
+
+    &[data-type="webp"] {
+        background: var(--blue);
+
+        a:hover {
+            background: var(--bluedark);
+        }
+    }
+}

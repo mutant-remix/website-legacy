@@ -5,6 +5,7 @@ import useMedia from "use-media";
 import { Emoji } from "../Emoji";
 import { Hero } from "../Hero";
 import { useWindowSize } from '../../util/WindowSize';
+import Link from 'next/link';
 
 const EMOJIS = [
     "gsr/gsd/misc/so_gay",
@@ -110,7 +111,11 @@ export function ExpressYourself() {
                 <p>
                     Mutant brings in a bunch of new unique emojis and variations, there’s basically no limit to having emojis the way you truly like.
                 </p>
-                <Button style='turquoise'>Lemme see those emojis <Emoji codepoint="1f440" /></Button>
+                <Link href="/demo">
+                    <a>
+                        <Button style='turquoise'>Lemme see those emojis <Emoji codepoint="1f440" /></Button>
+                    </a>
+                </Link>
             </div>
             <div className={styles.container}>
                 <div className={styles.scroller} ref={ref}>

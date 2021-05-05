@@ -5,6 +5,7 @@ import { Navbar } from "../Navbar";
 import { Button } from "../Button";
 import classNames from "classnames";
 import styles from './MainHero.module.scss';
+import Link from "next/link";
 
 export function MainHero() {
     return (
@@ -32,7 +33,11 @@ export function MainHero() {
 								<p>
 									Mutant Remix brings a new twist to the good old emojis that have become a part of our daily conversations.
 								</p>
-								<Button style='purple'>Learn how to use it <Emoji codepoint="2197-fe0f" /></Button>
+								<Link href="/download">
+									<a>
+										<Button style='purple'>Take me to the downloads <Emoji codepoint="2197-fe0f" /></Button>
+									</a>
+								</Link>
 							</div>
 						</div>
 						<div />
