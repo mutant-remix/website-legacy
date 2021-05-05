@@ -20,7 +20,7 @@ export default function Home() {
 
                 <ul className={styles.list}>
                     <li>
-                        <Link href="/changelog/1.0">
+                        <Link href="/changelog/1">
                             <a>
                                 <b>05. May 2021</b> Release 1.0: Welcome!
                             </a>
