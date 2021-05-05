@@ -19,7 +19,7 @@ export function MainHero() {
 			<Hero column full>
 				<div className={classNames(styles.main, styles.top)}>
 					<div className={styles.menu}>
-						<Navbar />
+						<Navbar light={false} />
 					</div>
 				</div>
 				<div className={classNames(styles.main, styles.bottom)}>

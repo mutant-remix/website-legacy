@@ -40,7 +40,12 @@ function Category({ emojis, title }: { emojis: string[], title: string }) {
                 emojis
                 .filter(x => !x.match(/ /g))
                 .map(path =>
-                    <Image className={styles.image} src={`https://static.revolt.chat/mutant/short/${path}?v=${VERSION}`} width={64} height={64} key={path} />
+                    <img
+                        src={`https://static.revolt.chat/mutant/short/${path}?v=${VERSION}`}
+                        className={styles.image}
+                        width={64}
+                        height={64}
+                        key={path} />
                 )
             }
             </div>

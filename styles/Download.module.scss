@@ -70,3 +70,11 @@
         }
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .downloads {
+        margin: 2em 0;
+        gap: 2em;
+        flex-direction: column;
+    }
+}
