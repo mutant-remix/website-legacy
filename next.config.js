@@ -6,5 +6,8 @@ module.exports = withMDX({
     pageExtensions: ['tsx', 'mdx'],
     future: {
         webpack5: true
-    }
+    },
+    images: {
+        domains: ['static.revolt.chat'],
+    },
 })

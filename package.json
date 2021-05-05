@@ -18,6 +18,7 @@
   "devDependencies": {
     "@fontsource/barlow": "^4.2.2",
     "@types/react": "^17.0.4",
+    "axios": "^0.21.1",
     "classnames": "^2.3.1",
     "sass": "^1.32.12",
     "typescript": "^4.2.4",
