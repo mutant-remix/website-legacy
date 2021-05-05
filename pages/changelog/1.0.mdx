@@ -1,6 +1,10 @@
-<img src="../public/assets/remix_release_v1.png" style="margin: 20px 0 0 0"></img>
+import Layout from './Layout';
+import styles from './Layout.module.scss';
+import { Emoji } from '../../components/Emoji';
 
-### 30th April 2021
+<img src="/assets/remix_release_v1.png" className={styles.header}></img>
+
+### 05. May 2021
 
 # Welcome!
 
@@ -14,7 +18,7 @@ This project is designed for use with the Revolt platform, but feel free to cont
 
 ## What's new?
 
-- Our first release! 🥳
+- Our first release! <Emoji path="expressions/smileys/happy_fun/party_face" />
 - 98 blob-ified smileys from Mutant Standard (+ some extras)
 - New website! This will be the official home for Mutant Remix from now on :)
 
@@ -29,3 +33,5 @@ Mutant Remix and Mutant Standard share the same [Creative Commons Attribution-No
 -----
 
 > Mutant Remix is not affiliated with [Mutant Standard](https://mutant.tech/). This is a transformation of the original Mutant Standard emoji pack, created by nizune for [Revolt](https://revolt.chat/).
+
+export default ({ children }) => <Layout title="Release 1.0">{children}</Layout>

@@ -1,10 +1,9 @@
 import Head from 'next/head'
+import Link from 'next/link';
 import { Page } from '../components/Page'
 import { Clamp } from '../components/Clamp'
 import styles from '../styles/Download.module.scss';
-
-const VERSION = '1.0';
-const RELEASE_DATE = '05. May 2021';
+import { RELEASE_DATE, VERSION } from '../manifest';
 
 export default function Home() {
     function genLink(path: string) {
@@ -12,7 +11,7 @@ export default function Home() {
     }
 
 	return (
-        <Page navbar>
+        <Page dark navbar>
 			<Head>
                 <title>Download – Mutant Remix</title>
 
@@ -24,6 +23,11 @@ export default function Home() {
             <Clamp>
 			    <h1>Download</h1>
                 <h3 className={styles.version}>version {VERSION} (released {RELEASE_DATE})</h3>
+                <Link href="/changelog">
+                    <a>
+                        <h3>Open Changelog</h3>
+                    </a>
+                </Link>
                 <div className={styles.downloads}>
                     <div className={styles.column}>
                         <h2>Shortcode Format</h2>

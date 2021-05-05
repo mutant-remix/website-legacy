@@ -9,5 +9,5 @@ export type Props = {
 export function Emoji(props: Props) {
     let o = props as any;
     return <img className={styles.emoji}
-        src={o.codepoint ? `https://static.revolt.chat/emoji/mutant/${o.codepoint}.svg` : `https://mutant.revolt.chat/static/shortcode/${o.path}.svg`} />
+        src={o.codepoint ? `https://static.revolt.chat/emoji/mutant/${o.codepoint}.svg` : `https://static.revolt.chat/mutant/shortcode/${o.path}.svg`} />
 }

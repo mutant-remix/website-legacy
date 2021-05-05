@@ -37,10 +37,13 @@ a {
 }
 
 main {
-	color: white;
 	min-height: 100vh;
 	user-select: none;
-    background: var(--gray);
+
+	&[data-dark="true"] {
+		color: white;
+		background: var(--gray);
+	}
 }
 
 h1 {

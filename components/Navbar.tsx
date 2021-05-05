@@ -3,12 +3,13 @@ import { Emoji } from './Emoji';
 import styles from './Navbar.module.scss';
 
 interface Props {
+    light: boolean
     center?: boolean
 }
 
 export function Navbar(props: Props) {
     return (
-        <div className={styles.navbar} data-center={props.center}>
+        <div className={styles.navbar} data-center={props.center} data-light={props.light}>
             <Link href="/">
                 <a>
                     <img className={styles.logo} src="/logo.svg" draggable="false"/>

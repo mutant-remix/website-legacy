@@ -4,21 +4,22 @@ import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
 
 interface Props {
+    dark: boolean,
     navbar?: boolean,
     children?: ReactNode | ReactNode[]
 }
 
-export function Page({ children, navbar }: Props) {
+export function Page({ dark, children, navbar }: Props) {
     return (
-        <main>
+        <main data-dark={dark}>
 			<Head>
 				<title>Mutant Remix</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			</Head>
 
-            { navbar && <Navbar center /> }
+            { navbar && <Navbar center light={!dark} /> }
 			{ children }
-			<Footer />
+			<Footer light={!dark} />
 		</main>
     )
 }

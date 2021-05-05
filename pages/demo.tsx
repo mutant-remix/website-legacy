@@ -1,10 +1,12 @@
 import Head from 'next/head'
-import { Clamp } from '../components/Clamp'
 import { Page } from '../components/Page'
+import { Clamp } from '../components/Clamp'
+import styles from '../styles/Demo.module.scss'
+import { DISCORD_INVITE, RELEASE_DATE, VERSION } from '../manifest'
 
 export default function Home() {
 	return (
-        <Page navbar>
+        <Page dark navbar>
 			<Head>
                 <title>Demo – Mutant Remix</title>
 
@@ -15,6 +17,10 @@ export default function Home() {
 
             <Clamp>
                 <h1>Demo</h1>
+                <h3 className={styles.version}>version {VERSION} (released {RELEASE_DATE})</h3>
+                <a href={DISCORD_INVITE} target="_blank">
+                    <h3>View on Discord</h3>
+                </a>
             </Clamp>
         </Page>
 	)

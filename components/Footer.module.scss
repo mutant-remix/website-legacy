@@ -6,8 +6,16 @@
     align-items: center;
     flex-direction: column;
 
-    color: white;
-    background: var(--gray);
+    &:not([data-light="true"]) {
+        color: white;
+        background: var(--gray);
+    }
+
+    &[data-light="true"] {
+        .revolt {
+            filter: invert(1);
+        }
+    }
 
     .revolt {
         height: 15px;
@@ -18,10 +26,15 @@
     }
 
     p {
-        color: darkgrey;
+        color: gray;
         font-size: 16px;
         text-align: center;
         width: unset;
         margin-bottom: 0;
+    }
+
+    .links {
+        color: darkgray;
+        margin-bottom: 1rem;
     }
 }
