@@ -63,7 +63,7 @@ h3 {
 
 p {
 	font-size: 22px;
-	width: clamp(0%, 50%, 75ch);
+	// width: clamp(0%, 50%, 75ch);
 }
 
 @media screen and (max-width: 460px) {
