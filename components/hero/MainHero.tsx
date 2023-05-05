@@ -8,9 +8,9 @@ import styles from './MainHero.module.scss';
 import Link from "next/link";
 
 export function MainHero() {
-    return (
-        <Fragment>
-            <div className={styles.overlay}>
+	return (
+		<Fragment>
+			<div className={styles.overlay}>
 				<div className={styles.whitespace}></div>
 				<div className={styles.image}>
 					<img src="/emoji-display.svg" />
@@ -34,9 +34,7 @@ export function MainHero() {
 									Mutant Remix brings a new twist to the good old emojis that have become a part of our daily conversations.
 								</p>
 								<Link href="/download">
-									<a>
-										<Button style='purple'>Take me to the downloads <Emoji codepoint="2197-fe0f" /></Button>
-									</a>
+									<Button style='purple'>Take me to the downloads <Emoji codepoint="2197-fe0f" /></Button>
 								</Link>
 							</div>
 						</div>
@@ -44,6 +42,6 @@ export function MainHero() {
 					</div>
 				</div>
 			</Hero>
-        </Fragment>
-    )
+		</Fragment>
+	)
 }

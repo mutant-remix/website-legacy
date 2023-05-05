@@ -25,7 +25,7 @@ const EMOJIS = [
 ];
 
 const IMAGE_WIDTH = 120 + 20;
-const easeInOutQuad = t => t<.5 ? 2*t*t : -1+(4-2*t)*t;
+const easeInOutQuad = t => t < .5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 
 export function ExpressYourself() {
     const { width } = useWindowSize();
@@ -67,9 +67,9 @@ export function ExpressYourself() {
             let x = easeInOutQuad(v / IMAGE_WIDTH);
             el.style.transform = `translateX(-${x * IMAGE_WIDTH}px)`;
 
-            for (let i=0;i<el.children.length;i++) {
+            for (let i = 0; i < el.children.length; i++) {
                 let element = el.children[i] as HTMLImageElement;
-                
+
                 let opacity = 0;
                 if (isSmall) {
                     if (i === display + 1) {
@@ -112,9 +112,7 @@ export function ExpressYourself() {
                     Mutant brings in a bunch of new unique emojis and variations, there’s basically no limit to having emojis the way you truly like.
                 </p>
                 <Link href="/demo">
-                    <a>
-                        <Button style='turquoise'>Lemme see those emojis <Emoji codepoint="1f440" /></Button>
-                    </a>
+                    <Button style='turquoise'>Lemme see those emojis <Emoji codepoint="1f440" /></Button>
                 </Link>
             </div>
             <div className={styles.container}>

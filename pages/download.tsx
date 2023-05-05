@@ -10,29 +10,27 @@ export default function Home() {
         return `https://static.revolt.chat/mutant/downloads/${VERSION}/mtnt_${VERSION}_${path}`;
     }
 
-	return (
+    return (
         <Page dark navbar>
-			<Head>
+            <Head>
                 <title>Download – Mutant Remix</title>
 
                 <meta property="og:title" content="Download – Mutant Remix" />
                 <meta property="og:url" content="https://mutant.revolt.chat/download" />
                 <meta property="og:description" content="Download the Mutant Remix emoji sets." />
-			</Head>
+            </Head>
 
             <Clamp>
-			    <h1>Download</h1>
+                <h1>Download</h1>
                 <h3 className={styles.version}>version {VERSION} (released {RELEASE_DATE})</h3>
                 <Link href="/changelog">
-                    <a>
-                        <h3>Open Changelog</h3>
-                    </a>
+                    <h3>Open Changelog</h3>
                 </Link>
                 <div className={styles.downloads}>
                     <div className={styles.column}>
                         <h2>Shortcode Format</h2>
                         <p>
-                            Structured folder tree with categories containing files for each relevant emoji.<br/>
+                            Structured folder tree with categories containing files for each relevant emoji.<br />
                             Uses human-readable names.
                         </p>
                         <p><b>SVG</b> – Vector graphics.</p>
@@ -64,7 +62,7 @@ export default function Home() {
                     <div className={styles.column}>
                         <h2>Codepoint Format</h2>
                         <p>
-                            Flat folder full of single emoji images, filename is the emoji's Unicode codepoint.<br/>
+                            Flat folder full of single emoji images, filename is the emoji's Unicode codepoint.<br />
                             Some emojis which don't have codepoints may not be included in these!
                         </p>
                         <p><b>SVG</b> – Vector graphics.</p>
@@ -107,5 +105,5 @@ export default function Home() {
                 </div>
             </Clamp>
         </Page>
-	)
+    )
 }
