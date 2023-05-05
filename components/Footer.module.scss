@@ -21,8 +21,8 @@
         height: 15px;
     }
 
-    .link {
-        color: var(--purple);
+    .link, .link:visited {
+        color: darkgray;
     }
 
     p {
