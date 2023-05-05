@@ -33,7 +33,7 @@ export function MainHero() {
 								<p>
 									Mutant Remix brings a new twist to the good old emojis that have become a part of our daily conversations.
 								</p>
-								<Link href="/download">
+								<Link href="https://github.com/mutant-remix/mutant-remix/releases">
 									<Button style='purple'>Take me to the downloads <Emoji codepoint="2197-fe0f" /></Button>
 								</Link>
 							</div>
