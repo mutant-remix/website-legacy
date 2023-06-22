@@ -28,7 +28,7 @@ export function LicensingInformation() {
 						<div>
 							<h3><Emoji codepoint="2705" /> Make your own!</h3>
 							<p>
-								You’re free to remix, transform or build upon the Mutant Standard emoji pack, as long as you follow the original Creative Commons license. Don't forget to add attribution!
+								You're free to remix, transform or build upon the Mutant emoji packs, as long as you follow the original Creative Commons license. Don't forget to include attribution!
 							</p>
 						</div>
 					</div>
@@ -36,14 +36,14 @@ export function LicensingInformation() {
 						<div>
 							<h3><Emoji codepoint="26d4-fe0f" /> Use it for any commercial purposes</h3>
 							<p>
-								You’re not allowed to sell the entirety or parts of the pack or restrict anyone from using it behind a paywall.
+								You're not allowed to sell the entirety or parts of the pack or restrict people from using it (e.g. by putting it behind a paywall).
 							</p>
 						</div>
 						<div>
-							<h3><Emoji codepoint="26d4-fe0f" /> You must redistribute with the same license</h3>
+							<h3><Emoji codepoint="26d4-fe0f" /> Distribute it with another license</h3>
 							<p>
-								Mutant (also Mutant Remix) are both licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. <br/>
-								If you choose to remix, transform or build upon the material, you must redistribute it with the same license as the original.
+								Mutant Standard and Mutant Remix are both licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. <br/>
+								If you choose to remix, transform or build upon the emoji packs, you must redistribute your changes under the same license.
 							</p>
 						</div>
 					</div>

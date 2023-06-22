@@ -6,7 +6,7 @@ export function PlainAndSimple() {
             <div>
                 <h1>Plain, simple and just darn cute.</h1>
                 <p>
-                    Mutant Remix pays homage to the good old Android blob emojis and combining the same style with the amazing-looking Mutant Standard emoji pack. You do the math.
+                    Mutant Remix pays homage to the good old Android blob emojis, combining them with the incredible Mutant Standard emoji pack. You do the math.
                 </p>
             </div>
             <img src="/addition.svg" />
